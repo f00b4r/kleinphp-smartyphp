@@ -1,4 +1,4 @@
-kleinphp-smarty
+Klein Smarty
 ===============
 
-KLEINPHP library with Smarty template engine
+KleinPHP library with Smarty template engine
