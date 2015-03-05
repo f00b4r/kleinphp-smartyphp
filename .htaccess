@@ -1,31 +1,18 @@
-# Apache configuration file (see httpd.apache.org/docs/2.2/mod/quickreference.html)
+# Why rewrite URLs? Read this: http://en.wikipedia.org/wiki/Rewrite_engine
 
-# disable directory listing
-Options -Indexes
+# Apache (.htaccess or httpd.conf)
+# Make sure AllowOverride is on for the directory, or put the rewrite rules in httpd.conf
+# http://httpd.apache.org/docs/2.0/mod/core.html#allowoverride
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . /index.php [L]
 
-# enable cool URL
-<IfModule mod_rewrite.c>
-	RewriteEngine On
-	# RewriteBase /
+# Nginx (nginx.conf)
+#try_files $uri /index.php;
 
-	# prevents files starting with dot to be viewed by browser
-	RewriteRule /\.|^\. - [F]
+# More reading:
+# - http://httpd.apache.org/docs/2.0/mod/mod_rewrite.html
+# - http://wiki.nginx.org/HttpRewriteModule
+# - http://wiki.nginx.org/Pitfalls
 
-	# front controller
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule !\.(pdf|js|ico|gif|jpg|png|css|rar|zip|tar\.gz)$ index.php [L]
-</IfModule>
-
-# enable gzip compression
-<IfModule mod_deflate.c>
-	AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/x-javascript text/javascript application/javascript application/json
-</IfModule>
-
-# allow combined JavaScript & CSS. Inside of script.combined.js you could use <!--#include file="script.js" -->
-<IfModule mod_include.c>
-	<FilesMatch "\.combined\.(js|css)$">
-		Options +Includes
-		SetOutputFilter INCLUDES
-	</FilesMatch>
-</IfModule>
+# Note: Thanks to James (http://github.com/jamesvl) for his improvements and fixes (http://gist.github.com/910325)

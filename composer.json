@@ -1,0 +1,19 @@
+{
+  "name": "f3l1x/kleinsmarty",
+  "description": "Klein.php router with Smarty template engine.",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Milan Felix Sulc",
+      "homepage": "http://jfx.cz"
+    }
+  ],
+  "require": {
+    "php": ">= 5.5",
+    "klein/klein": "~2.1.0",
+    "smarty/smarty": "~3.1.0"
+  },
+  "config": {
+    "vendor-dir": "app/vendor"
+  }
+}
