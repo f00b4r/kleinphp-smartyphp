@@ -2,6 +2,7 @@
   "name": "f3l1x/kleinsmarty",
   "description": "Klein.php router with Smarty template engine.",
   "type": "project",
+  "license": ["BSD-3-Clause"],
   "authors": [
     {
       "name": "Milan Felix Sulc",
