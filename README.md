@@ -10,7 +10,7 @@ Klein.php with Smarty template engine.
 1) Install via composer.
 
 ```sh
-composer create-project f3l1x/kleinsmarty:dev-master
+composer create-project f3l1x/kleinsmarty:~0.2
 ```
 
 2) Create app/cache folder.
