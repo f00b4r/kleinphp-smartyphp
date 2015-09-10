@@ -1,6 +1,6 @@
 # Klein.php-Smarty
 
-[![Downloads this Month](https://img.shields.io/packagist/dm/f3l1x/kleinsmarty.svg?style=flat)](https://packagist.org/packages/f3l1x/kleinsmarty)
+[![Downloads total](https://img.shields.io/packagist/dt/f3l1x/kleinsmarty.svg?style=flat)](https://packagist.org/packages/f3l1x/kleinsmarty)
 [![Latest stable](https://img.shields.io/packagist/v/f3l1x/kleinsmarty.svg?style=flat)](https://packagist.org/packages/f3l1x/kleinsmarty)
 
 Klein.php with Smarty template engine.
